@@ -1,5 +1,5 @@
-//const jwt = require('jsonwebtoken')
-const Usuario = require('../model/cliente');
+const jwt = require('jsonwebtoken')
+const cliente = require('../model/cliente');
 
 exports.listar = (req, res) => {
     cliente.find({}, (err, cliente) =>{ 
@@ -123,7 +123,7 @@ exports.buscarcliente = (req, res) => {
     }
 }
 
-exports.validarUsuario = (req, res) => {
+exports.validarcliente = (req, res) => {
     if(req.body && req.body.email && req.body.senha && req.body.Endereco && req.body.Telefone) {
         const emailcliente = req.body.email;
         const senhacliente = req.body.senha;
