@@ -32,7 +32,7 @@ exports.inserir = (req, res) => {
     }
     else {
         return res.status(400).json({
-            Erro:"Nome, email e/ou senha sao obrigatorios"
+            Erro:"Nome ,email e/ou cpf sao obrigatorios"
         })
     }
 }
