@@ -19,7 +19,7 @@ const trataLog = (req, res, next) => {
 //Configuração da conexão com o Mongo
 mongoose.connect('mongodb://127.0.0.1:27017/app_produtos')
   .then(() => {
-    console.log("Conectado ao Mongo..");
+    console.log("Conectado ao Mongo...OK");
   }).catch((error) => { 
     console.log("Erro>:", error) 
   });
