@@ -3,7 +3,7 @@ const clienteController = require('../controller/cliente_controller')
 
 const router = express.Router();
 
-//Rota do recurso: "/api/CLientes"
+//Rota do recurso: "/api/Cliente"
 
 router.get('/', clienteController.listar)
 router.post('/', clienteController.inserir)
