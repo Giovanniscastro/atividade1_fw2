@@ -124,13 +124,11 @@ exports.buscarcliente = (req, res) => {
 }
 
 exports.validarcliente = (req, res) => {
-    if(req.body && req.body.email && req.body.senha && req.body.Endereco && req.body.Telefone) {
-        const emailcliente = req.body.email;
+    if(req.body && req.body.cpf && req.body.senha) {
+        const cpfcliente = req.body.cpf;
         const senhacliente = req.body.senha;
-        const Enderecocliente = req.body.Endereco;
-        const Telefonecliente = req.body.Telefone;
-
-        cliente.findOne({cpf: paramCpf}, (err, clienteEncontrado) => {
+        
+        cliente.findOne({cpf: cpfcliente}, (err, clienteEncontrado) => {
             if(err) {
                 return res.status(500).json({Erro: err}); 
             }
